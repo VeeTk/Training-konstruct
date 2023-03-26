@@ -222,6 +222,12 @@ body {
       line-height: 15px;
       letter-spacing: 0.5px;
       padding-top: 5px;
+      &:hover {
+         background: #00aff4;
+      }
+      &:active {
+         background: #00a4e5;
+      }
    }
 }
 
@@ -292,6 +298,12 @@ body {
       width: 150px;
       color: #fff;
       margin-top: 35px;
+      &:hover {
+         background: #00aff4;
+      }
+      &:active {
+         background: #00a4e5;
+      }
    }
 }
 
@@ -338,7 +350,102 @@ body {
       font-weight: 600;
       font-size: 13px;
       line-height: 15px;
+      &:hover {
+         background: #00aff4;
+      }
+      &:active {
+         background: #00a4e5;
+      }
    }
 }
-.input-signup {
+
+// footer-nav-panel
+.footer {
+   height: 242px;
+   background: #141a20;
+   color: #fff;
+   &__content {
+      display: flex;
+      justify-content: space-between;
+      padding: 42px 5px 42px 5px;
+      max-height: 100%;
+   }
+}
+
+.content {
+   &__logo {
+      img {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__links {
+   }
+   &__sochials {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-top: 34px;
+      cursor: pointer;
+   }
+}
+.logo {
+   &__title {
+      font-size: 11px;
+      line-height: 13px;
+      letter-spacing: 0.846154px;
+      margin-bottom: 19px;
+   }
+   &__subtitle {
+      font-size: 11px;
+      line-height: 19px;
+      letter-spacing: 0.85px;
+   }
+}
+.links {
+   &__title {
+      margin-bottom: 10px;
+   }
+   li {
+      font-size: 11px;
+      line-height: 25px;
+      letter-spacing: 0.846154px;
+      cursor: pointer;
+      &:hover {
+         color: #00a4e5;
+      }
+      &:active {
+         color: #ffffff;
+      }
+   }
+}
+
+.contacts {
+   &__contact {
+      font-size: 11px;
+      line-height: 13px;
+      letter-spacing: 0.846154px;
+   }
+   div {
+      margin-bottom: 15px;
+      font-size: 11px;
+      line-height: 16px;
+      letter-spacing: 0.846154px;
+   }
+}
+
+// copy
+
+.copy {
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #171819;
+   &__text {
+      color: #fff;
+      font-size: 11px;
+      line-height: 13px;
+      letter-spacing: 0.846154px;
+   }
 }

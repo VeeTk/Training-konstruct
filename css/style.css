@@ -269,6 +269,12 @@ body {
   letter-spacing: 0.5px;
   padding-top: 5px;
 }
+.capabilities__button:hover {
+  background: #00aff4;
+}
+.capabilities__button:active {
+  background: #00a4e5;
+}
 
 .row {
   display: flex;
@@ -334,6 +340,12 @@ body {
   color: #fff;
   margin-top: 35px;
 }
+.amasing__button:hover {
+  background: #00aff4;
+}
+.amasing__button:active {
+  background: #00a4e5;
+}
 
 .signup {
   height: 100px;
@@ -376,4 +388,87 @@ body {
   font-weight: 600;
   font-size: 13px;
   line-height: 15px;
+}
+.signup__button:hover {
+  background: #00aff4;
+}
+.signup__button:active {
+  background: #00a4e5;
+}
+
+.footer {
+  height: 242px;
+  background: #141a20;
+  color: #fff;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 5px 42px 5px;
+  max-height: 100%;
+}
+
+.content__logo img {
+  margin-bottom: 15px;
+}
+.content__sochials {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 34px;
+  cursor: pointer;
+}
+
+.logo__title {
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.846154px;
+  margin-bottom: 19px;
+}
+.logo__subtitle {
+  font-size: 11px;
+  line-height: 19px;
+  letter-spacing: 0.85px;
+}
+
+.links__title {
+  margin-bottom: 10px;
+}
+.links li {
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 0.846154px;
+  cursor: pointer;
+}
+.links li:hover {
+  color: #00a4e5;
+}
+.links li:active {
+  color: #ffffff;
+}
+
+.contacts__contact {
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.846154px;
+}
+.contacts div {
+  margin-bottom: 15px;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.846154px;
+}
+
+.copy {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #171819;
+}
+.copy__text {
+  color: #fff;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.846154px;
 }
