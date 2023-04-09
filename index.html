@@ -7,6 +7,7 @@
    <meta name="format-detection" content="telephone=no">
    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0 , user-scalable=0">
    <link rel="stylesheet" href="css/style.css">
+   <script src="js/script.js" defer></script>
    <title>Konstruct</title>
 </head>
 
@@ -120,8 +121,7 @@
          <div class="signup__content wrapper">
             <div class="signup__title">Newsletter Signup</div>
             <div class="signup__input">
-               <input type="email" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="test@youremail.com"
-                  class="input-signup">
+               <input id="run_input" type="email" autocomplete="off" name="form[]" data-error="Ошибка" onfocus="clearTimeout(done); runInput.value = ' '; i = 0; " onblur="runLine();" class="input-signup">
                <button type="button" class="signup__button">SIGNUP</button>
             </div>
          </div>
