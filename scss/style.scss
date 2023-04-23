@@ -119,6 +119,24 @@ body {
       gap: 10px;
    }
 }
+
+.fa-solid {
+   img {
+      position: fixed;
+      bottom: 150px;
+      right: 50px;
+      height: 50px;
+      cursor: pointer;
+   }
+}
+._hide-btn {
+   opacity: 0;
+}
+._show-btn {
+   opacity: 1;
+   transition: 0.5s;
+}
+
 .header {
    &__title {
       font-weight: 600;
@@ -376,6 +394,7 @@ body {
    &__logo {
       img {
          margin-bottom: 15px;
+         cursor: pointer;
       }
    }
 

@@ -47,6 +47,7 @@ const menuAbout = document.querySelector(".nav__link-about");
 const menuServices = document.querySelector(".nav__link-services");
 const menuWork = document.querySelector(".nav__link-work");
 const menuContact = document.querySelector(".nav__link-contact");
+const scrollDownBtn = document.querySelector(".mainimage__button");
 
 // прокрутка в начало по нажатию Home
 function scrollToHome(param) {
@@ -100,7 +101,7 @@ menuWork.addEventListener("click", () => {
 });
 
 // прокрутка до contact
-function scrollIntoWork(param) {
+function scrollIntoContact(param) {
    const contact = document.querySelector(".copy");
    contact.scrollIntoView({
       block: "end",
@@ -109,5 +110,34 @@ function scrollIntoWork(param) {
    });
 }
 menuContact.addEventListener("click", () => {
-   scrollIntoWork(true);
+   scrollIntoContact(true);
+});
+
+// scroll down кнопка
+function scrollDown(param) {
+   const scrollDown = document.querySelector(".menu");
+   scrollDown.scrollIntoView({
+      block: "start",
+      inline: "nearest",
+      behavior: "smooth",
+   });
+}
+scrollDownBtn.addEventListener("click", () => {
+   scrollDown(true);
+});
+
+//\/\/\/\/\/\/\/\/
+//  КНОПКА TO TOP
+
+const scrollTopBtn = document.querySelector(".fa-solid");
+
+window.onscroll = () => {
+   if (window.scrollY > 765) {
+      scrollTopBtn.classList.add("_show-btn");
+   } else if (window.scrollY < 800) {
+      scrollTopBtn.classList.remove("_show-btn");
+   }
+};
+scrollTopBtn.addEventListener("click", () => {
+   scrollToHome();
 });
