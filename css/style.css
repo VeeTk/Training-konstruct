@@ -181,6 +181,19 @@ body {
   right: 50px;
   height: 50px;
   cursor: pointer;
+  -webkit-animation: arrowtotop 2s linear;
+          animation: arrowtotop 2s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.fa-solid img:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+.fa-solid img:active {
+  bottom: 145px;
+  right: 46px;
+  height: 60px;
 }
 
 ._hide-btn {
@@ -189,9 +202,32 @@ body {
 
 ._show-btn {
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.55s;
 }
 
+@-webkit-keyframes arrowtotop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrowtotop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header__title {
   font-weight: 600;
   color: #48555b;

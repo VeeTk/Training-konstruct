@@ -127,6 +127,16 @@ body {
       right: 50px;
       height: 50px;
       cursor: pointer;
+      animation: arrowtotop 2s linear;
+      animation-iteration-count: infinite;
+      &:hover {
+         animation: none;
+      }
+      &:active {
+         bottom: 145px;
+         right: 46px;
+         height: 60px;
+      }
    }
 }
 ._hide-btn {
@@ -134,7 +144,18 @@ body {
 }
 ._show-btn {
    opacity: 1;
-   transition: 0.5s;
+   transition: 0.55s;
+}
+@keyframes arrowtotop {
+   0% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0.55;
+   }
+   100% {
+      opacity: 1;
+   }
 }
 
 .header {
