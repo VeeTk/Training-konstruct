@@ -1,25 +1,25 @@
 // Бегущая строка в инпуте
 
-const runInput = document.querySelector("#run_input");
-const speed = 125;
-const line = "test@youremail.com...";
+// const runInput = document.querySelector("#run_input");
+// const speed = 125;
+// const line = "test@youremail.com...";
 
-// for (let i = 0; i <= line.length; i++) {
-//    runInput.value = line.substring(0, i);
+// // for (let i = 0; i <= line.length; i++) {
+// //    runInput.value = line.substring(0, i);
+// // }
+
+// let i = 0;
+// function runLine() {
+//    if (i++ < line.length) {
+//       runInput.value = line.substring(0, i);
+//    } else {
+//       runInput.value = " ";
+//       i = 0;
+//    }
+//    done = setTimeout("runLine()", speed);
 // }
 
-let i = 0;
-function runLine() {
-   if (i++ < line.length) {
-      runInput.value = line.substring(0, i);
-   } else {
-      runInput.value = " ";
-      i = 0;
-   }
-   done = setTimeout("runLine()", speed);
-}
-
-runLine();
+// runLine();
 
 // прокручивание скрола по нажатию на элемент в меню
 
@@ -128,7 +128,6 @@ scrollDownBtn.addEventListener("click", () => {
 
 //\/\/\/\/\/\/\/\/
 //  КНОПКА TO TOP
-
 const scrollTopBtn = document.querySelector(".fa-solid");
 
 window.onscroll = () => {
@@ -140,4 +139,72 @@ window.onscroll = () => {
 };
 scrollTopBtn.addEventListener("click", () => {
    scrollToHome();
+});
+
+//\/\/\/\/\/\/\/
+// Отправка введенной в инпут почты при нажатии signup
+
+document.addEventListener("DOMContentLoaded", function () {
+   const form = document.getElementById("run_input");
+   const signup = document.querySelector(".signup__button");
+   const signupBody = document.querySelector(".signup");
+
+   signup.addEventListener("click", formSend);
+
+   async function formSend(e) {
+      e.preventDefault();
+
+      let error = formValidate(form);
+      console.log(error);
+      // let formData = new FormData(form);
+
+      if (error === 0) {
+         signupBody.classList.add("_sending");
+         let response = await fetch("sendmail.php", {
+            method: "POST",
+            body: formData,
+         });
+
+         if (response.ok) {
+            let result = await response.json();
+            alert(result.message);
+            formPreview.innerHTML = "";
+            form.reset();
+            form.classList.remove("_sending");
+         } else {
+            alert("Ошибка");
+            form.classList.remove("_sending");
+         }
+      } else {
+         alert("Пожалуйста, заполните поле корректно");
+      }
+   }
+
+   function formValidate(form) {
+      let error = 0;
+      let formReq = document.querySelector("._req");
+
+      if (emailTest(formReq)) {
+         formAddError(formReq);
+         error++;
+      } else if (formReq.value === "") {
+         formAddError(formReq);
+         error++;
+      } else {
+         formRemoveError(formReq);
+      }
+      return error;
+   }
+   function formAddError(formReq) {
+      formReq.classList.add("_error");
+   }
+   function formRemoveError(formReq) {
+      formReq.classList.remove("_error");
+   }
+   // Функция проверки email
+   function emailTest(formReq) {
+      return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(
+         formReq.value
+      );
+   }
 });

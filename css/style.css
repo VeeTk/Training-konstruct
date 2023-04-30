@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 * {
@@ -401,6 +402,7 @@ body {
 }
 
 .signup {
+  position: relative;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -431,6 +433,10 @@ body {
   border: 1px solid #979797;
   border-right: 0;
   padding: 11px 0px 10px 16px;
+  transition: all 0.25s linear;
+}
+.signup__input input:focus {
+  box-shadow: 0 0 10px #00a4e5;
 }
 .signup__button {
   height: 40px;
@@ -447,6 +453,27 @@ body {
 }
 .signup__button:active {
   background: #00a4e5;
+}
+.signup::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9) url(../img/отправка.png) center/50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s linear 0s;
+}
+
+._error {
+  box-shadow: 0 0 15px #ce0000;
+}
+
+._sending::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .footer {
