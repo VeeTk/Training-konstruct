@@ -1,26 +1,3 @@
-// Бегущая строка в инпуте
-
-// const runInput = document.querySelector("#run_input");
-// const speed = 125;
-// const line = "test@youremail.com...";
-
-// // for (let i = 0; i <= line.length; i++) {
-// //    runInput.value = line.substring(0, i);
-// // }
-
-// let i = 0;
-// function runLine() {
-//    if (i++ < line.length) {
-//       runInput.value = line.substring(0, i);
-//    } else {
-//       runInput.value = " ";
-//       i = 0;
-//    }
-//    done = setTimeout("runLine()", speed);
-// }
-
-// runLine();
-
 // прокручивание скрола по нажатию на элемент в меню
 
 const mainElement = document.documentElement; //Получили тег html
@@ -35,10 +12,6 @@ let scrollHeight = Math.max(
    document.body.clientHeight,
    document.documentElement.clientWidth
 );
-
-console.log(mainElemWidth);
-console.log(mainElemHeight);
-console.log(scrollHeight);
 
 // Прокрутка до элементов по клику одной из кнопок в меню
 
@@ -155,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       let error = formValidate(form);
-      console.log(error);
       // let formData = new FormData(form);
 
       if (error === 0) {
@@ -165,16 +137,16 @@ document.addEventListener("DOMContentLoaded", function () {
             body: formData,
          });
 
-         if (response.ok) {
-            let result = await response.json();
-            alert(result.message);
-            formPreview.innerHTML = "";
-            form.reset();
-            form.classList.remove("_sending");
-         } else {
-            alert("Ошибка");
-            form.classList.remove("_sending");
-         }
+         //    if (response.ok) {
+         //       let result = await response.json();
+         //       alert(result.message);
+         //       formPreview.innerHTML = "";
+         //       form.reset();
+         //       form.classList.remove("_sending");
+         //    } else {
+         //       alert("Ошибка");
+         //       form.classList.remove("_sending");
+         //    }
       } else {
          alert("Пожалуйста, заполните поле корректно");
       }
@@ -208,3 +180,28 @@ document.addEventListener("DOMContentLoaded", function () {
       );
    }
 });
+
+// Бегущая строка в инпуте
+
+// const runInput = document.querySelector("#run_input");
+// const speed = 125;
+// const line = "   test@youremail.com...";
+
+// for (let i = 0; i <= line.length; i++) {
+//    runInput.value = line.substring(0, i);
+// }
+
+// let i = 0;
+// function runLine() {
+//    if (i++ < line.length) {
+//       runInput.value = line.substring(0, i);
+//    } else {
+//       // runInput.value = "";
+//       i = 0;
+//    }
+//    done = setTimeout("runLine()", speed);
+// }
+
+// if (runInput.value === "") {
+//    runLine();
+// }

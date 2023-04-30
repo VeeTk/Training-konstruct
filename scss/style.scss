@@ -13,8 +13,7 @@ body {
    margin: 0 auto;
 }
 
-.header {
-}
+
 .mainimage {
    height: 769px;
    display: flex;
@@ -63,9 +62,6 @@ body {
    &__logo {
       cursor: pointer;
    }
-
-   &__nav {
-   }
 }
 .nav {
    color: #48555b;
@@ -88,8 +84,6 @@ body {
    }
 }
 
-.main {
-}
 .ourstory {
    &__header {
       display: flex;
@@ -445,8 +439,6 @@ body {
       }
    }
 
-   &__links {
-   }
    &__sochials {
       display: flex;
       align-items: flex-start;
