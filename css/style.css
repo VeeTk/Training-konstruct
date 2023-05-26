@@ -187,6 +187,7 @@ body {
           animation: arrowtotop 2s linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  z-index: 100;
 }
 .fa-solid img:hover {
   -webkit-animation: none;

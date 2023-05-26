@@ -123,6 +123,7 @@ body {
       cursor: pointer;
       animation: arrowtotop 2s linear;
       animation-iteration-count: infinite;
+      z-index: 100;
       &:hover {
          animation: none;
       }
@@ -339,6 +340,8 @@ body {
       }
    }
 }
+
+// signup_______________________________________________
 
 .signup {
    position: relative;

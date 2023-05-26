@@ -114,6 +114,27 @@ scrollTopBtn.addEventListener("click", () => {
    scrollToHome();
 });
 
+// Бегущая строка в инпуте_______________________________________
+
+const runInput = document.querySelector("#run_input");
+const speed = 125;
+const line = "test@youremail.com...";
+
+let i = 0;
+function runLine() {
+   if (i++ < line.length) {
+      runInput.value = line.substring(0, i);
+   } else {
+      runInput.value = "";
+      i = 0;
+   }
+   done = setTimeout("runLine()", speed);
+}
+
+if (runInput.value === "") {
+   runLine();
+}
+
 //\/\/\/\/\/\/\/
 // Отправка введенной в инпут почты при нажатии signup
 
@@ -180,28 +201,3 @@ document.addEventListener("DOMContentLoaded", function () {
       );
    }
 });
-
-// Бегущая строка в инпуте
-
-// const runInput = document.querySelector("#run_input");
-// const speed = 125;
-// const line = "   test@youremail.com...";
-
-// for (let i = 0; i <= line.length; i++) {
-//    runInput.value = line.substring(0, i);
-// }
-
-// let i = 0;
-// function runLine() {
-//    if (i++ < line.length) {
-//       runInput.value = line.substring(0, i);
-//    } else {
-//       // runInput.value = "";
-//       i = 0;
-//    }
-//    done = setTimeout("runLine()", speed);
-// }
-
-// if (runInput.value === "") {
-//    runLine();
-// }
