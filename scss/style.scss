@@ -9,8 +9,9 @@ body {
 }
 
 .wrapper {
-   max-width: 940px;
+   max-width: 960px;
    margin: 0 auto;
+   padding: 0px 10px 0px 10px;
 }
 
 .mainimage {
@@ -179,6 +180,7 @@ body {
    }
 
    &__text {
+      max-width: 412px;
       font-size: 13px;
       line-height: 23px;
       letter-spacing: 0.1875px;
@@ -227,6 +229,7 @@ body {
       letter-spacing: 2.30625px;
       font-weight: 700;
       color: #48555b;
+      text-align: center;
       &::after {
          content: "";
          border: 2px solid #00a4e5;
@@ -240,10 +243,13 @@ body {
    }
 
    &__text {
+      max-width: 440px;
+      text-align: left;
       font-size: 11px;
       line-height: 19px;
       letter-spacing: 0.2px;
       color: #48555b;
+      padding: 0px 25px 0px 25px;
    }
 
    &__button {
@@ -363,6 +369,7 @@ body {
       font-size: 22px;
       line-height: 26px;
       letter-spacing: 0.84px;
+      padding: 0px 15px 0px 0px;
    }
 
    &__input {
@@ -457,12 +464,15 @@ body {
       margin-bottom: 19px;
    }
    &__subtitle {
+      max-width: 260px;
       font-size: 11px;
       line-height: 19px;
       letter-spacing: 0.85px;
+      padding: 0px 10px 0px 0px;
    }
 }
 .links {
+   padding: 0px 10px 0px 0px;
    &__title {
       margin-bottom: 10px;
    }
@@ -481,6 +491,7 @@ body {
 }
 
 .contacts {
+   max-width: 112px;
    &__contact {
       font-size: 11px;
       line-height: 13px;
@@ -507,5 +518,78 @@ body {
       font-size: 11px;
       line-height: 13px;
       letter-spacing: 0.846154px;
+   }
+}
+
+// @media --------------------------------------------------------
+@media (max-width: 880px) {
+   .right__image-title {
+      font-size: 20px;
+      line-height: 22px;
+   }
+}
+@media (max-width: 770px) {
+   .right__image-title {
+      font-size: 18px;
+      line-height: 20px;
+   }
+   .capabilities__title::after {
+      min-width: 50px;
+      left: 0;
+      right: 0;
+      width: auto;
+   }
+   .amasing {
+      margin: 30px 0px 0px 0px;
+   }
+}
+@media (max-width: 730px) {
+   .right__image-title {
+      font-size: 16px;
+      line-height: 20px;
+   }
+   .ourstory__content {
+      gap: 40px;
+   }
+   .amasing {
+      margin: 10px 0px 0px 0px;
+   }
+   .capabilities__button {
+      font-size: 10px;
+      line-height: 12px;
+      padding: 3px 10px 0px 10px;
+   }
+}
+@media (max-width: 670px) {
+   .nav__links {
+      gap: 20px;
+   }
+   .ourstory__right {
+      flex-direction: column;
+      flex: 1 1 25%;
+   }
+   .ourstory__content {
+      gap: 80px;
+   }
+   .capabilities {
+      margin: 80px 0px 0px 0px;
+   }
+   .row {
+      flex-direction: column;
+   }
+   .row__block {
+      padding: 15px 22px 15px 22px;
+      min-height: 0;
+   }
+   .footer {
+      height: auto;
+   }
+   .footer__content {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 10px;
+   }
+   .links {
+      padding: 0px 0px 0px 0px;
    }
 }
