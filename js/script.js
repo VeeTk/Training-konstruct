@@ -201,3 +201,18 @@ document.addEventListener("DOMContentLoaded", function () {
       );
    }
 });
+
+// Код для меню-бургера -----------------------------------------
+const burgerLink = document.querySelectorAll('.nav__link');
+const burgerBtn = document.querySelector(".menu-button-container");
+
+burgerLink.forEach((link) => {
+   link.addEventListener("click", () => {
+      burgerBtn.click();
+   });
+});
+
+
+
+
+
