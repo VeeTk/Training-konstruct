@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Код для меню-бургера -----------------------------------------
-const burgerLink = document.querySelectorAll('.nav__link');
+const burgerLink = document.querySelectorAll(".nav__link");
 const burgerBtn = document.querySelector(".menu-button-container");
 
 burgerLink.forEach((link) => {
@@ -211,8 +211,3 @@ burgerLink.forEach((link) => {
       burgerBtn.click();
    });
 });
-
-
-
-
-

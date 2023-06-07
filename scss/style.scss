@@ -705,3 +705,60 @@ body {
       border-bottom: 1px solid #444;
    }
 }
+@media (max-width: 440px) {
+   .titles__title {
+      font-size: 35px;
+      line-height: 40px;
+      padding: 0px 10px 0px 10px;
+   }
+   .titles__subtitle {
+      font-size: 15px;
+      line-height: 17px;
+      padding: 0px 10px 0px 10px;
+   }
+   .mainimage {
+      height: 680px;
+   }
+   .ourstory__content {
+      gap: 20px;
+   }
+   .left__title {
+      font-size: 18px;
+      line-height: 21px;
+   }
+   .left__text {
+      font-size: 13px;
+      line-height: 16px;
+      margin-top: 15px;
+   }
+   .capabilities__text {
+      font-size: 10px;
+      line-height: 10px;
+      padding: 0px 9px 0px 9px;
+   }
+   .capabilities__title {
+      font-size: 14px;
+      line-height: 19px;
+   }
+   .block__title {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 10px;
+   }
+   .block__text {
+      font-size: 12px;
+      line-height: 19px;
+   }
+   .block__img {
+      margin-bottom: 17px;
+   }
+}
+@media (max-width: 415px) {
+   .signup__input {
+      max-width: 300px;
+   }
+   .signup__button {
+      font-size: 10px;
+      line-height: 15px;
+   }
+}
